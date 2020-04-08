@@ -1,21 +1,25 @@
 {
-  "name": "forclosure_api",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "foreclosure_api",
+  "version": "0.0.1",
   "license": "MIT",
+  "main": "dist/api.js",
+  "bin": "dist/cli.js",
   "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.0",
+    "@types/node": "^13.11.0",
     "babel-jest": "^25.2.6",
     "jest": "^25.2.7",
-    "parcel-bundler": "^1.12.4"
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^3.8.3"
   },
   "scripts": {
-    "dev": "parcel src/index.js",
-    "build": "parcel build src/index.js",
+    "dev": "parcel *.ts --target node",
+    "build": "parcel build *.ts --target node",
     "test": "jest"
   },
   "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "jsdom": "^16.2.2",
     "ramda": "^0.27.0"
   }
 }
