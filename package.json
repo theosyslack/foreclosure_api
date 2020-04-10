@@ -15,6 +15,7 @@
     "dev": "parcel *.ts --target node",
     "build": "parcel build *.ts --target node",
     "test": "jest",
+    "prebuild:docker": "yarn build",
     "build:docker": "docker build . -t foreclosure_api"
   },
   "dependencies": {
